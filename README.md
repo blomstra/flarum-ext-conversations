@@ -1,4 +1,4 @@
-# Conversations
+# External Conversations
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/blomstra/conversations.svg)](https://packagist.org/packages/blomstra/conversations) [![Total Downloads](https://img.shields.io/packagist/dt/blomstra/conversations.svg)](https://packagist.org/packages/blomstra/conversations)
 
