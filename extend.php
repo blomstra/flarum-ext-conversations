@@ -11,6 +11,7 @@
 
 namespace Blomstra\Conversations;
 
+use Flarum\Api\Serializer\PostSerializer;
 use Flarum\Extend;
 use Flarum\Post\Event\Saving as PostSaving;
 

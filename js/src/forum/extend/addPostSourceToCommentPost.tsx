@@ -20,12 +20,12 @@ export default function addSourceToCommentPost() {
       return;
     }
 
-    const displayText = app.translator.trans('blomstra-conversations-email.forum.post.source');
-    const className = 'PostedByEmail';
+    const displayText = app.translator.trans('blomstra-conversations.forum.post.source.' + source);
+    const className = 'ConversationSource';
 
     let element;
 
-    if (source === 'blomstra-post-by-mail' && !sourceData) {
+    if (source && !sourceData) {
       element = <span className={className}>{displayText}</span>;
     } else {
       element = (
