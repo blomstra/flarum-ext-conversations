@@ -12,7 +12,8 @@
         "email": "helpdesk@blomstra.net"
     },
     "require": {
-        "flarum/core": "^1.3.0"
+        "flarum/core": "^1.3.0",
+        "flarum/tags": "*"
     },
     "authors": [
         {
