@@ -22,7 +22,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Conversations",
+            "title": "External Conversations",
             "category": "feature",
             "icon": {
                 "name": "fas fa-comments",
