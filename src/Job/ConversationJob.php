@@ -7,7 +7,6 @@ use Flarum\Discussion\Discussion;
 use Flarum\Post\Command\PostReply;
 use Flarum\Post\Post;
 use Flarum\Queue\AbstractJob;
-use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\Tags\Tag;
 use Flarum\User\User;
 use Illuminate\Contracts\Bus\Dispatcher;
@@ -18,7 +17,7 @@ class ConversationJob extends AbstractJob
 
     protected string $sourceId = '';
     
-    public function __construct(protected SettingsRepositoryInterface $settings)
+    public function __construct()
     {
         if (static::$onQueue) {
             $this->onQueue(static::$onQueue);
