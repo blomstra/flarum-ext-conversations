@@ -16,5 +16,9 @@ class SavePostSourceToDatabase
         if ($sourceData = Arr::get($event->data, 'attributes.source-data')) {
             $event->post->source_data = $sourceData;
         }
+
+        if ($sourceRaw = Arr::get($event->data, 'attributes.source-raw')) {
+            $event->post->source_raw = $sourceRaw;
+        }
     }
 }

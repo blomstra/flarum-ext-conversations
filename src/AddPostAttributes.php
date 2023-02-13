@@ -24,6 +24,10 @@ class AddPostAttributes
             $attributes['source_data'] = $post->source_data;
         }
 
+        if ($serializer->getActor()->can('viewRawSource', $post->discussion)) {
+            $attributes['source_raw'] = $post->source_raw;
+        }
+
         return $attributes;
     }
 }

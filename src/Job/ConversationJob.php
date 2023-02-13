@@ -35,7 +35,7 @@ class ConversationJob extends AbstractJob
      * @param Tag|null $tag
      * @return Discussion
      */
-    public function startDiscussionFromSource(string $title, string $content, User $author, string $source, string $sourceData, Tag $tag = null): Discussion
+    public function startDiscussionFromSource(string $title, string $content, User $author, string $source, string $sourceData, Tag $tag = null, string $sourceRaw = null): Discussion
     {
         $data = [
             'attributes' => [
@@ -43,6 +43,7 @@ class ConversationJob extends AbstractJob
                 'content'      => $content,
                 'source'       => $source,
                 'source-data'  => $sourceData,
+                'source-raw'   => $sourceRaw,
             ],
         ];
         
@@ -63,13 +64,14 @@ class ConversationJob extends AbstractJob
      * @param string $sourceData
      * @return Post
      */
-    public function replyToDiscussionFromSource(Discussion $discussion, string $content, User $author, string $source, string $sourceData): Post
+    public function replyToDiscussionFromSource(Discussion $discussion, string $content, User $author, string $source, string $sourceData, string $sourceRaw = null): Post
     {
         $data = [
             'attributes' => [
                 'content'      => $content,
                 'source'       => $source,
                 'source-data'  => $sourceData,
+                'source-raw'   => $sourceRaw,
             ],
         ];
 
